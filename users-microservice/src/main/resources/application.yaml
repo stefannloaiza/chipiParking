@@ -1,0 +1,28 @@
+application:
+    title: Users Microservice
+    version: 1.0
+
+spring:
+    application:
+        name: users-msvc
+    devtools:
+        restart:
+            enabled: false
+    jpa:
+        show-sql: true
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                format_sql: true
+    datasource:
+        url: jdbc:postgresql://0.0.0.0:5432/mydatabase
+        username: myuser
+        password: secret
+    docker:
+        compose:
+            enabled: 'false'
+
+logging:
+    level:
+        org.hibernate.SQL: DEBUG
