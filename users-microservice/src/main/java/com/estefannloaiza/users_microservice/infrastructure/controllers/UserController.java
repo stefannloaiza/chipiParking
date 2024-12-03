@@ -24,18 +24,29 @@ public class UserController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public User save(User user) {
-        return userUseCases.save(user);
+        return userUseCases.saveUser(user);
     }
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public Collection<User> findAll() {
-        return userUseCases.findAll();
+        return userUseCases.findAllUsers();
     }
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public User findById(@PathVariable UUID id) {
-        return userUseCases.findById(id);
+        return userUseCases.findUserById(id);
+    }
+
+    @GetMapping("/email/{email}")
+    @ResponseStatus(HttpStatus.OK)
+    public User findByEmail(@PathVariable String email) {
+        return userUseCases.findUserByEmail(email);
     }
 }
+
+// plates-microservice - CRU - entity Plate - los campos consideren
+// spring initializer - spring web -
+// spring data jpa - devtools - lombok - docker-compose -
+// postgresql

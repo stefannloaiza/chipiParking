@@ -12,5 +12,7 @@ public interface IUserRepository {
 
     Optional<User> findById(UUID id);
 
+    Optional<User> findByEmail(String email);
+
     Collection<User> findAll();
 }

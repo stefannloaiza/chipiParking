@@ -7,9 +7,11 @@ import java.util.UUID;
 
 public interface IUserUseCases {
 
-    User save(User user);
+    User saveUser(User user);
 
-    User findById(UUID id);
+    User findUserById(UUID id);
 
-    Collection<User> findAll();
+    User findUserByEmail(String email);
+
+    Collection<User> findAllUsers();
 }
