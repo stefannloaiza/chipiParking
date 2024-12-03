@@ -1,13 +1,13 @@
 application:
-    title: Users Microservice
+    title: Plates Microservice
     version: 1.0
 
 server:
-    port: 8082
+    port: 8083
 
 spring:
     application:
-        name: users-msvc
+        name: plates-msvc
     devtools:
         restart:
             enabled: false

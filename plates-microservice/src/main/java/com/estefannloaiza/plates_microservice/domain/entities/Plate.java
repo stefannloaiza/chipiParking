@@ -1,4 +1,4 @@
-package com.estefannloaiza.users_microservice.domain.entities;
+package com.estefannloaiza.plates_microservice.domain.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -14,27 +14,23 @@ import java.sql.Timestamp;
 import java.util.UUID;
 
 @Entity
-@Table(name = "users")
+@Table(name = "plates")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class Plate {
     @Id
-    @GeneratedValue(strategy=GenerationType.UUID)
-    @Column( updatable = false, nullable = false)
+    @GeneratedValue(strategy= GenerationType.UUID)
+    @Column(updatable = false, nullable = false)
     private UUID id;
-    private String name;
-    private String email;
-    private String password;
-    private String status;
+    @Column(updatable = false, nullable = false)
+    private String description;
     @Column(name = "created_at", updatable = false, nullable = false)
     private Timestamp createdAt;
-    @Column(name = "updated_at", updatable = false)
-    private Timestamp updatedAt;
 
     @Override
     public String toString() {
-        return "User{id=%s, name='%s', email='%s', password='%s', status='%s', createdAt=%s, updatedAt=%s}"
-                .formatted(id, name, email, password, status, createdAt, updatedAt);
+        return "Plate{id=%s, description='%s', createdAt=%s}"
+                .formatted(id, description, createdAt);
     }
 }
