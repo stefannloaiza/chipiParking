@@ -15,3 +15,20 @@ El sistema tiene como objetivo proporcionar una solución integral para gestiona
 - Integración con diferentes microservicios para una arquitectura modular.
 
 Cada funcionalidad principal está separada en microservicios para asegurar un desarrollo limpio y organizado.
+
+---
+
+## **Microservicios Actuales**
+
+- **Users Microservice**  
+  Maneja la creación y gestión de usuarios:
+
+    - Registro de nuevos usuarios.
+    - Consulta de usuarios por ID o email.
+    - Listado completo de usuarios.
+- **Plates Microservice** _(En desarrollo)_  
+  Gestionará las placas de los vehículos:
+
+    - Registro y consulta de placas.
+    - Validaciones relacionadas con las placas.
+    - Integración con tiempos de estadía y tarifas.
